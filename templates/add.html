@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="tr">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Yeni Kitap Ekle</title>
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='style.css') }}"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="main-container">
+      <h1>Yeni Kitap Ekle</h1>
+
+      <form method="post">
+        <label for="title">Kitap Adı:</label>
+        <input type="text" id="title" name="title" required />
+
+        <label for="author">Yazar:</label>
+        <input type="text" id="author" name="author" required />
+
+        <label for="year">Yıl:</label>
+        <input type="number" id="year" name="year" />
+
+        <input type="submit" value="Ekle" />
+      </form>
+
+      <div style="margin-top: 20px">
+        <a href="{{ url_for('index') }}">← Geri Dön</a>
+      </div>
+    </div>
+  </body>
+</html>

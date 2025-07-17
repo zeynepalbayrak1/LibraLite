@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="tr">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Bibliora | Hoş Geldin</title>
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='style.css') }}"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+  </head>
+  <body>
+    <div class="landing-wrapper">
+      <div class="overlay"></div>
+      <div class="landing-container">
+        <div class="text-column">
+          <h1>Dijital Kütüphanene Hoş Geldin</h1>
+          <h2>Bibliora ile kitaplara dijital bir kapı arala!</h2>
+          <p>
+            Kendi kitap arşivini oluştur, kitapları takip et, okuma
+            alışkanlıklarını analiz et. Bibliora ile kitap dünyası artık senin
+            kontrolünde.
+          </p>
+
+          <div class="features">
+            <div>✔ Kitap ekle, güncelle ve ödünç al</div>
+            <div>✔ Kullanıcıya özel kitap yönetimi</div>
+            <div>✔ Güvenli giriş sistemi</div>
+            <div>✔ Modern tasarım, kolay kullanım</div>
+          </div>
+
+          <div class="cta-buttons">
+            <a href="{{ url_for('login') }}" class="btn-primary">Giriş Yap</a>
+            <a href="{{ url_for('register') }}" class="btn-secondary"
+              >Kayıt Ol</a
+            >
+          </div>
+        </div>
+
+        <div class="visual-column">
+          <lottie-player
+            src="https://assets7.lottiefiles.com/packages/lf20_gjmecwii.json"
+            background="transparent"
+            speed="1"
+            loop
+            autoplay
+            style="width: 100%; max-width: 600px"
+          >
+          </lottie-player>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

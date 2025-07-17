@@ -1,0 +1,48 @@
+{% extends 'base.html' %} {% block content %}
+<h1>Kütüphanedeki Kitaplar</h1>
+<form method="get" action="{{ url_for('index') }}">
+  <input
+    type="text"
+    name="query"
+    placeholder="Kitap başlığı veya yazar ara..."
+    value="{{ query }}"
+  />
+  <button type="submit">Ara</button>
+  {% if query %}
+  <a href="{{ url_for('index') }}">Aramayı temizle</a>
+  {% endif %}
+</form>
+
+<a href="{{ url_for('add') }}" class="add-book-link">Yeni Kitap Ekle</a>
+
+<ul class="book-list">
+  {% for book in books %}
+  <li class="book-item">
+    <div class="book-info">
+      <span>{{ book.title }}</span>
+      <span class="book-meta">{{ book.author }} ({{ book.year }})</span>
+      <span
+        class="book-status {{ 'available' if book.available == 1 else 'borrowed' }}"
+      >
+        {{ 'Mevcut' if book.available == 1 else 'Ödünç Verildi' }}
+      </span>
+    </div>
+    <div class="book-actions">
+      {% if book.available == 1 %}
+      <a href="{{ url_for('borrow', id=book.id) }}">Ödünç Al</a>
+      {% else %}
+      <a href="{{ url_for('return_book', id=book.id) }}">İade Et</a>
+      {% endif %}
+      <a href="{{ url_for('update', id=book.id) }}">Güncelle</a>
+      <a
+        href="{{ url_for('delete', id=book.id) }}"
+        onclick="return confirm('Silmek istediğine emin misin?');"
+        >Sil</a
+      >
+    </div>
+  </li>
+  {% else %}
+  <li>Kayıtlı kitap yok.</li>
+  {% endfor %}
+</ul>
+{% endblock %}

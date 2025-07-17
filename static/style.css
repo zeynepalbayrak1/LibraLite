@@ -1,0 +1,348 @@
+* {
+  font-family: "Josefin Sans", sans-serif !important;
+}
+
+body {
+  background-color: #f0f4f8;
+  margin: 0;
+  padding: 0;
+  color: #333;
+}
+
+h1 {
+  text-align: center;
+  color: #4a148c;
+  margin-top: 30px;
+}
+
+a {
+  text-decoration: none;
+  color: #4a148c;
+  font-weight: bold;
+}
+
+a:hover {
+  color: #6a1b9a;
+  text-decoration: underline;
+}
+
+/* ANA SAYFA */
+.main-container {
+  width: 90%;
+  max-width: 800px;
+  margin: 30px auto;
+  background: #fff;
+  padding: 25px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 12px;
+}
+
+ul.book-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.book-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px;
+  background: #e1bee7;
+  border-radius: 8px;
+  margin-bottom: 10px;
+  flex-wrap: wrap;
+}
+
+.book-info {
+  max-width: 60%;
+}
+
+.book-title {
+  font-weight: bold;
+}
+
+.book-meta {
+  font-size: 0.9em;
+  color: #555;
+}
+
+.book-status {
+  font-size: 0.85em;
+  padding: 2px 6px;
+  border-radius: 4px;
+  display: inline-block;
+}
+
+.book-status.available {
+  background-color: #d4edda;
+  color: #155724;
+}
+
+.book-status.borrowed {
+  background-color: #f8d7da;
+  color: #721c24;
+}
+
+/* ACTION LİNKLER */
+.book-actions {
+  margin-top: 12px;
+  display: flex;
+  gap: 10px;
+}
+
+.book-actions a {
+  font-size: 0.9em;
+  color: #007bff;
+}
+
+.book-actions a:hover {
+  text-decoration: underline;
+}
+
+/* FORM STİL */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+input[type="text"],
+input[type="password"],
+input[type="number"] {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+button,
+input[type="submit"] {
+  background-color: #4a148c;
+  color: white;
+  border: none;
+  padding: 10px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+button:hover,
+input[type="submit"]:hover {
+  background-color: #6a1b9a;
+}
+
+/* GİRİŞ / KAYIT SAYFASI */
+.auth-container {
+  display: flex;
+  width: 900px;
+  height: 600px;
+  margin: 40px auto;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  overflow: hidden;
+  background: white;
+}
+
+.auth-left {
+  flex: 1.2;
+  background: #4a148c;
+  color: white;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.auth-left h1 {
+  font-size: 36px;
+  margin-bottom: 10px;
+}
+
+.auth-left p {
+  font-size: 18px;
+}
+
+.auth-right {
+  flex: 1;
+  padding: 40px;
+  background: #fafafa;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.auth-right .register-link {
+  margin-top: 10px;
+  font-size: 14px;
+}
+
+.auth-right .register-link a {
+  color: #5b3cc4;
+  text-decoration: none;
+}
+
+.auth-right .register-link a:hover {
+  text-decoration: underline;
+}
+
+/* KAYIT FORMU ÖZEL */
+.form-container {
+  max-width: 400px;
+  margin: auto;
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* FLASH MESAJLAR */
+.flash {
+  color: red;
+  margin-bottom: 10px;
+}
+
+/* HOME PAGE */
+.landing-wrapper {
+  position: relative;
+  background: linear-gradient(to right, #e6d7fb, #f2cdf7);
+  min-height: 100vh;
+  overflow: hidden;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.6);
+  z-index: 1;
+}
+
+.landing-container {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: auto;
+  padding: 60px 40px;
+  flex-wrap: wrap;
+}
+
+.text-column {
+  flex: 1;
+  max-width: 550px;
+}
+
+.text-column h1 {
+  font-size: 42px;
+  color: #4a148c;
+  margin-bottom: 20px;
+}
+
+.text-column p {
+  font-size: 18px;
+  color: #333;
+  margin-bottom: 25px;
+  line-height: 1.6;
+}
+
+.features div {
+  margin-bottom: 8px;
+  font-size: 16px;
+  color: #555;
+}
+
+.cta-buttons {
+  margin-top: 30px;
+  display: flex;
+  gap: 20px;
+}
+
+.btn-primary,
+.btn-secondary {
+  padding: 14px 28px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: all 0.3s ease;
+  font-size: 16px;
+}
+
+.btn-primary {
+  background-color: #4a148c;
+  color: white;
+}
+
+.btn-primary:hover {
+  background-color: #6a1b9a;
+}
+
+.btn-secondary {
+  background-color: #6c757d;
+  color: white;
+}
+
+.btn-secondary:hover {
+  background-color: #5a6268;
+}
+
+.visual-column {
+  flex: 1;
+  text-align: center;
+  position: relative;
+}
+
+.background-book-img {
+  margin-top: 20px;
+  border-radius: 12px;
+  width: 100%;
+  max-width: 380px;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+}
+
+/* YENİ KİTAP EKLEME BUTONU İÇİN */
+.add-book-link {
+  margin-top: 15px;
+  margin-bottom: 15px;
+  display: inline-block;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .landing-container {
+    flex-direction: column;
+    padding: 30px 20px;
+  }
+  .text-column,
+  .visual-column {
+    max-width: 100%;
+    text-align: center;
+  }
+  .cta-buttons {
+    justify-content: center;
+  }
+  .auth-container {
+    flex-direction: column;
+    height: auto;
+    width: auto;
+    margin-top: 0;
+    border-radius: 0;
+  }
+  .auth-left,
+  .auth-right {
+    padding: 30px;
+  }
+  .main-container {
+    padding: 15px;
+    margin: 15px;
+    width: auto;
+  }
+  .book-item {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
